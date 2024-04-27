@@ -1,0 +1,22 @@
+name: Eshanized - RustDesk Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Start Building...
+    runs-on: windows-latest
+    timeout-minutes: 9999
+    
+    steps:
+      - name: Downloading & Installing Essentials
+        run: |
+          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/eshanized-download.bat" -OutFile "eshanized-download.bat"
+          cmd /c eshanized-download.bat
+
+      - name: Log In To RustDesk
+        run: cmd /c eshanized-show.bat
+
+      - name: Time Counter
+        run: python eshanized-time.py
