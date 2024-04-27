@@ -1,11 +1,11 @@
 @echo off
-curl -L -o login.py https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/eshanized-login.py
-curl -L -o loop.bat https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/eshanized-loop.bat
-curl -L -o show.bat https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/eshanized-show.bat
+curl -L -o login.py https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/login.py
+curl -L -o loop.bat https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/loop.bat
+curl -L -o show.bat https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/show.bat
 certutil -urlcache -split -f "https://github.com/rustdesk/rustdesk/releases/download/1.2.3-2/rustdesk-1.2.3-2-x86_64.exe" rustdesk.exe
 pip install pyautogui --quiet
 pip install psutil --quiet
-curl -s -L -o time.py https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/eshanized-time.py
+curl -s -L -o time.py https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/timelimit.py
 curl -s -L -o C:\Users\Public\Desktop\Telegram.exe https://telegram.org/dl/desktop/win64
 curl -s -L -o C:\Users\Public\Desktop\Winrar.exe https://www.rarlab.com/rar/winrar-x64-621.exe
 powershell -Command "Invoke-WebRequest 'https://github.com/chieunhatnang/VM-QuickConfig/releases/download/1.6.1/VMQuickConfig.exe' -OutFile 'C:\Users\Public\Desktop\VMQuickConfig.exe'"
