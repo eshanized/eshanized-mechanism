@@ -1,4 +1,4 @@
 @echo off
-echo Alive 🚀...
+echo Alive 👾...
 :recheck
-tasklist | find /i "provisioner.exe" >Nul && (ping 127.0.0.1 >Nul & goto recheck)  || echo "Dead 🪓..."
+tasklist | find /i "provisioner.exe" >Nul && (ping 127.0.0.1 >Nul & goto recheck)  || echo "Dead 💀..."

@@ -17,7 +17,7 @@ jobs:
           Invoke-WebRequest -Uri "https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/Downloads.bat" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
 
-      - name: Log In To AnyDesk
+      - name: Log In To RustDesk
         run: cmd /c show.bat
 
       - name: Time Counter
