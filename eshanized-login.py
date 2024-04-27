@@ -1,4 +1,4 @@
-import pyautogui as pag
+import pyautogui as pg
 import time
 import pyperclip
 
@@ -29,14 +29,14 @@ time.sleep(2)
 for x, y, duration in actions:
     if (x, y) == (165, 168) or (x, y) == (138, 167):
         # For right-click coordinates, perform right-click
-        pag.rightClick(x, y, duration=duration)
+        pg.rightClick(x, y, duration=duration)
     else:
-        pag.click(x, y, duration=duration)
+        pg.click(x, y, duration=duration)
     if (x, y) in [(291, 250), (310, 338)]:
         # For "first fill" and "second fill" coordinates, type the desired text
-        pag.keyDown('D')  # Press the "D" key
+        pg.keyDown('D')  # Press the "D" key
         text_to_type = "eshanized"
-        pag.typewrite(text_to_type)
+        pg.typewrite(text_to_type)
 
 def save_echo_to_batch(file_path, echo_text):
     with open(file_path, 'a') as file:
