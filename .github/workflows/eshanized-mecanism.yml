@@ -1,4 +1,4 @@
-name: Windows - RustDesk
+name: Eshanized - Mechanism
 
 on:
   workflow_dispatch:
