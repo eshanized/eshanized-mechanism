@@ -10,13 +10,14 @@ jobs:
     timeout-minutes: 9999
     
     steps:
+      - name: Download Dependency
+        run: Import-Module Microsoft.PowerShell.Security
       - name: Downloading & Installing Essentials
         run: |
           Invoke-WebRequest -Uri "https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/eshanized-download.bat" -OutFile "eshanized-download.bat"
           cmd /c eshanized-download.bat
 
-      - name: Download Dependency
-        run: Import-Module Microsoft.PowerShell.Security
+
       - name: Log In To RustDesk
         run: cmd /c eshanized-show.bat
 
