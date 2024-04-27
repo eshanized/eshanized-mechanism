@@ -1,4 +1,4 @@
-name: Eshanized - RustDesk Runner
+name: Windows - RustDesk
 
 on:
   workflow_dispatch:
@@ -10,16 +10,13 @@ jobs:
     timeout-minutes: 9999
     
     steps:
-      - name: Download Dependency
-        run: Import-Module Microsoft.PowerShell.Security
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/eshanized/eshanized-mechanism/master/eshanized-download.bat" -OutFile "eshanized-download.bat"
-          cmd /c eshanized-download.bat
+          Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/qdyd4p9t6xoabl95n5o3g/Downloads.bat?rlkey=snr74vv1vr8k5suujugvrhjtm&dl=1" -OutFile "Downloads.bat"
+          cmd /c Downloads.bat
 
-
-      - name: Log In To RustDesk
-        run: cmd /c eshanized-show.bat
+      - name: Log In To AnyDesk
+        run: cmd /c show.bat
 
       - name: Time Counter
-        run: python eshanized-time.py
+        run: python time.py
