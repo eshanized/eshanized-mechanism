@@ -51,4 +51,4 @@ def run_rustdesk_command():
 if __name__ == "__main__":
     run_rustdesk_command()
 
-print("Done!!! Log in Credintials:\n")
+print("Done!!! Log in Credintials:")
