@@ -45,8 +45,8 @@ def save_echo_to_batch(file_path, echo_text):
 def run_rustdesk_command():
     clipboard_text = pyperclip.paste()
     password_echo = 'Password : eshanized'  
-    save_echo_to_batch('show.bat', f'RustDesk ID: {clipboard_text}')
-    save_echo_to_batch('show.bat', password_echo)
+    save_echo_to_batch('eshanized-show.bat', f'RustDesk ID: {clipboard_text}')
+    save_echo_to_batch('eshanized-show.bat', password_echo)
 
 if __name__ == "__main__":
     run_rustdesk_command()
